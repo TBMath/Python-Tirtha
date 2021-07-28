@@ -12,4 +12,4 @@ try:
 except (ZeroDivisionError):
     print("You can't add zero numbers")
 except ValueError:
-     print("Enter a number.")
+     print("Enter a \" number.")
