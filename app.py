@@ -1,15 +1,14 @@
-try:
-    range_num = int(input('How many number do you want to add? '))
-    total = 0
-    for add in range(range_num):
-        nums = int(input('Number: '))
-        check_1 = nums/nums
-        total += nums
-    check = range_num/range_num
-    stop = (print(total))
+def power_squa(numbers):
+    numbers = int(numbers)
+    return  numbers ** 2
 
 
-except (ZeroDivisionError):
-    print("You can't add zero numbers")
-except ValueError:
-     print("Enter a number.")
+def power_cub(nums):
+    nums = int(nums)
+    return nums ** 3
+
+
+num = input('>')
+num = int(num)
+print(F"Squared: {power_squa(num)}")
+print(f"Cubed: {power_cub(num)}")

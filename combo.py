@@ -1,0 +1,6 @@
+Question = input("What is your first name? ")
+Question1 = input("What is your last name? ")
+birth_year = input('What year were you born in?  ')
+print("Welcome, " + Question.capitalize() + " " + Question1.capitalize() + "!")
+chicken_nugget = 2021 - int(birth_year)
+print('You are ' + str(chicken_nugget) + " years old.")
