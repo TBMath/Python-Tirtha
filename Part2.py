@@ -1,0 +1,1 @@
+common = print("common")
