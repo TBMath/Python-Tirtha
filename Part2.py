@@ -1,11 +1,11 @@
-def fizz_buzz(input):
-    if input % 5 or 3 == 0:
-        fb = "FizzBuzz"
-    if input % 3 == 0:
-        fb = "Fizz"
-    elif input % 5 == 0:
-        fb = "Buzz"
-    else:
-        fb = f"{input}"
-    return fb
-    print(fizz_buzz(5))
+class PrintObjects:
+    def objects(self, x):
+        self.x = x
+        pass
+
+    def print(self):
+        return
+
+
+print_objects = PrintObjects(34)
+print(print_objects)
