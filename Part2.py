@@ -1,11 +1,11 @@
 class PrintObjects:
-    def objects(self, x):
+    def __init__(self, x, y):
         self.x = x
-        pass
+        self.y = y
+
 
     def print(self):
-        return
-
+        return self
 
 print_objects = PrintObjects(34)
 print(print_objects)
