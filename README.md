@@ -1,3 +1,2 @@
-# Python-Tirtha
 # Python Projects
-print('Hello World')
+This is all the python project I'e done.
