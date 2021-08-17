@@ -1,4 +1,4 @@
-from abc import ABC, abstractmathod, abstractmethod
+from abc import ABC, abstractmethod
 
 
 class DoneError(Exception):
@@ -7,19 +7,19 @@ class DoneError(Exception):
 
 class Webinar(ABC):
     def __init__(self):
-        self.open = False
+        self.on = False
 
     def on(self):
-        if self.open:
+        if self.on:
             raise DoneError("Webinar is already opened.")
         else:
-            self.open = True
+            self.on = True
 
     def off(self):
-        if not self.open:
+        if not self.on:
             raise DoneError("Webinar is already closed.")
         else:
-            self.open = False
+            self.on = False
 
 @abstractmethod
 def webinar_is(self):
@@ -41,5 +41,7 @@ class AlltypeWebiner(Webinar):
 
 
 webinar_type = Webinar()
-webinar_type.open
+webinar_type.on()
+webinar_type.on
+
 
