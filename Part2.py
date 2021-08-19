@@ -7,23 +7,25 @@ class DoneError(Exception):
 
 class Webinar(ABC):
     def __init__(self):
-        self.on = False
+        self.webinar = False
 
     def on(self):
-        if self.on:
+        if self.webinar:
             raise DoneError("Webinar is already opened.")
-        else:
-            self.on = True
+        self.webinar = True
+        print("Webinar is offically on.")
+
 
     def off(self):
-        if not self.on:
+        if not self.webinar:
             raise DoneError("Webinar is already closed.")
-        else:
-            self.on = False
+        self.webinar = False
+        print("Webinar is officially closed.")
+   
 
 @abstractmethod
 def webinar_is(self):
-            pass
+    pass
 
 
 class LiveWebinar(Webinar):
@@ -42,6 +44,3 @@ class AlltypeWebiner(Webinar):
 
 webinar_type = Webinar()
 webinar_type.on()
-webinar_type.on
-
-
