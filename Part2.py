@@ -15,17 +15,15 @@ class Webinar(ABC):
         self.webinar = True
         print("Webinar is offically on.")
 
-
     def off(self):
         if not self.webinar:
             raise DoneError("Webinar is already closed.")
         self.webinar = False
         print("Webinar is officially closed.")
-   
 
-@abstractmethod
-def webinar_is(self):
-    pass
+    @abstractmethod
+    def webinar_is(self):
+        pass
 
 
 class LiveWebinar(Webinar):
@@ -38,9 +36,9 @@ class RecordedWebinar(Webinar):
         print("Webinar is Recorded.")
 
 
-class AlltypeWebiner(Webinar):
+class AllTypeWebiner(Webinar):
     pass
 
 
-webinar_type = Webinar()
+webinar_type = AllTypeWebiner()
 webinar_type.on()
