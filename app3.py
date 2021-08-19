@@ -1,6 +1,16 @@
-from app1 import Paper
-paper = Paper(10, 9)
-paper.cal_distance()
-paper.add()
-papers = Paper("""😀😎n vjbgj hujgjgjgjmfckf😍😎😋😊😉😋😋(○｀ 3′○)§(*￣▽￣*)§(/▽＼)ψ(._. )>ψ(._. )>ψ(._. )>ψ(._. )>🙂☺☺☺(￣y▽,￣)╭ ‹]][]›™℗℗℗®®®®®©©©’“***‵‵‵‵‵‵‵‵‵‵℉℃℉····⁕⁕⁕⁕⁕⁕*****℉;hlglglgkgk;gk;lgk;lg;go[ph[pglglgtllpglpglbhkgkphkhkhkhhkpohkpohkjkjkpjooooooopbbhnlhjl;lhnl[phlhl[phlbh[lbgblblpblpnlpnlnplnpnlpnlpnlpnlpnlnpnlplpnlpnlpnllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll""", None)
-papers.draw()
+from abc import ABC, abstractmethod
+class Paper(ABC):
+    @abstractmethod
+    def cross(self):
+        pass
+class Straight:
+    def cross(self):
+        print("Straight line.")
+class NonStraight:
+    def cross(self):
+        print("Slanted line.")
+def type_line(line_object):
+    line_object.cross()
+straight = Straight()
+non_straight = NonStraight()
+type_line(straight)
