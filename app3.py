@@ -4,10 +4,10 @@ class Paper(ABC):
     def cross(self):
         pass
 class Straight:
-    def cross(self):
+    def cross(self): 
         print("Straight line.")
 class NonStraight:
-    def cross(self):
+    def cross(self): 
         print("Slanted line.")
 def type_line(line_object):
     line_object.cross()
