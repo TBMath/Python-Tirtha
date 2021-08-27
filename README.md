@@ -1,3 +1,3 @@
 # Python Projects
-This is all the python project I'e done.
+This is all the python project I've done.
 
