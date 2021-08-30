@@ -1,10 +1,10 @@
-from os import write
+import json
+import sqlite3
 from pathlib import Path
-from zipfile import PyZipFile, ZipFile
-with ZipFile("emergancy.zip", "w") as file:
-    for p in Path(r"C:\Users\Tirtha Biswas\Documents\GitHub\Python").rglob("*.*"):
-        file.write(p)
-
-
-
-
+path = Path("FamilyData.json").read_text()
+data = json.loads(path)
+with sqlite3.connect("Family.sqlite3") as database:
+    command = "INSERT INTO DATA VALUES(?, ?, ?)"
+    for family in data:
+        database.execute(command, tuple(family.values()))
+    database.commit()
