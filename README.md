@@ -9,10 +9,10 @@ var s = "JavaScript syntax highlighting";
 alert(s);
 ```
  
-```python
+'''python
 s = "Python syntax highlighting"
 print s
-```
+'''
  
 ```
 No language indicated, so no syntax highlighting. 
